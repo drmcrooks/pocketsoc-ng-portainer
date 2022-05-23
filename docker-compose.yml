@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - portainer-data:/data
+    ports:
+      - 8000:8000
+      - 9443:9443
