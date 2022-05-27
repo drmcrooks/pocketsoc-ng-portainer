@@ -16,3 +16,10 @@ services:
 
 volumes:
   portainer_data:
+  
+networks:
+  infrastructure:
+    ipam:
+      config:
+        - subnet: 172.31.0.0/16
+
