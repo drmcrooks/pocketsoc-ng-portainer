@@ -13,6 +13,8 @@ services:
     ports:
       - 8000:8000
       - 9443:9443
+    networks:
+      - infrastructure
 
 volumes:
   portainer_data:
