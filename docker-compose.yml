@@ -10,7 +10,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-      - /etc/ssl/soc:/certs
+      - /etc/ssl/soc/soc_training.crt:/certs/soc_training.crt:ro
+      - /etc/ssl/soc/soc_training.key:/certs/soc_training.key:ro
     ports:
       - 8000:8000
       - 9443:9443
