@@ -22,7 +22,7 @@ services:
     volumes:
       - /certs:/certs:ro
     ports:
-      - 9443:9444
+      - 9443:9443
     networks:
       - infrastructure
 
