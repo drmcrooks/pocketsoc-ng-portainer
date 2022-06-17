@@ -19,7 +19,7 @@ services:
       - infrastructure
 
   portainer-reverse-proxy:
-    build: ./components/reverse-proxy/
+    build: ./components/portainer-reverse-proxy/
     container_name: portainer-reverse-proxy
     volumes:
       - /certs:/certs:ro
