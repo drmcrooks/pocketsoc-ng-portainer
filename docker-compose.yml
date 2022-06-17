@@ -18,6 +18,16 @@ services:
     networks:
       - infrastructure
 
+  portainer-reverse-proxy:
+    build: ./components/reverse-proxy/
+    container_name: portainer-reverse-proxy
+    volumes:
+      - /certs:/certs:ro
+    ports:
+      - 9443:9443
+    networks:
+      - infrastructure
+
 volumes:
   portainer_data:
   
