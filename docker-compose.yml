@@ -12,20 +12,11 @@ services:
       - portainer_data:/data
       - /etc/ssl/certs/soc:/certs:ro
     ports:
+      - 8000:8000
       - 9443:9443
-      - 80:80
+      - 80:9000
     networks:
       - infrastructure
-
-#  portainer-reverse-proxy:
-#    build: ./components/portainer-reverse-proxy/
-#    container_name: portainer-reverse-proxy
-#    volumes:
-#      - /certs:/certs:ro
-#    ports:
-#      - 9443:9443
-#    networks:
-#      - infrastructure
 
 volumes:
   portainer_data:
@@ -35,4 +26,3 @@ networks:
     ipam:
       config:
         - subnet: 172.31.0.0/16
-
