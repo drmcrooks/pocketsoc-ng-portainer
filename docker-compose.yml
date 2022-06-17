@@ -12,7 +12,7 @@ services:
       - portainer_data:/data
       - /etc/ssl/certs/soc:/certs:ro
     ports:
-      - 9444:9443
+      - 9000:9000
     networks:
       - infrastructure
 
