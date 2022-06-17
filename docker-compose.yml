@@ -13,6 +13,7 @@ services:
       - /etc/ssl/certs/soc:/certs:ro
     ports:
       - 9443:9443
+      - 80:80
     networks:
       - infrastructure
 
