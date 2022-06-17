@@ -12,9 +12,7 @@ services:
       - portainer_data:/data
       - /etc/ssl/certs/soc:/certs:ro
     ports:
-      - 8000:8000
-      - 9443:9443
-      - 80:9000
+      - 9444:9443
     networks:
       - infrastructure
 
@@ -24,7 +22,7 @@ services:
     volumes:
       - /certs:/certs:ro
     ports:
-      - 9443:9443
+      - 9443:9444
     networks:
       - infrastructure
 
