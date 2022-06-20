@@ -12,23 +12,24 @@ services:
       - portainer_data:/data
       - /etc/ssl/certs/soc:/certs:ro
     ports:
+      - 9443:9443
       - 8000:8000
       - 8081:9000
     networks:
       - infrastructure
 
-  portainer-reverse-proxy:
-    image: portainer/portainer-ce:latest
-    container_name: portainer-reverse-proxy
-    restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - 9443:9443
-    networks:
-      - infrastructure
+#  portainer-reverse-proxy:
+#    image: portainer/portainer-ce:latest
+#    container_name: portainer-reverse-proxy
+#    restart: unless-stopped
+#    security_opt:
+#      - no-new-privileges:true
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#    ports:
+#      - 9443:9443
+#    networks:
+#      - infrastructure
 
 
 volumes:
