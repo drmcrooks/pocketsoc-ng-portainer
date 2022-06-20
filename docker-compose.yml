@@ -11,10 +11,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
       - certificates:/certs
-    environment:
-      - SSLCert:/certs/host-certs/live/${HOST_HOSTNAME}/cert.pem
-      - SSLKey:/certs/host-certs/live/${HOST_HOSTNAME}/privkey.pem
-     ports:
+    ports:
       - 9443:9443
       - 8000:8000
       - 8081:9000
