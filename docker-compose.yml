@@ -39,7 +39,7 @@ volumes:
   portainer_data:
   certificates:
     external: true
-    name: certificates
+    name: pocketsoc-ng-certificates_certificates
   
   
 networks:
