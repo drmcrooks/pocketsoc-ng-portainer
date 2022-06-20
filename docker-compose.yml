@@ -11,6 +11,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
       - certificates:/certs:ro
+    environment:
+      - sslcert:/certs/portainer.crt
+      - sslkey:/certs/portainer.key
     ports:
       - 9443:9443
       - 8000:8000
