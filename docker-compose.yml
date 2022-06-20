@@ -12,8 +12,8 @@ services:
       - portainer_data:/data
       - certificates:/certs
     environment:
-      - sslcert:/certs/portainer.crt
-      - sslkey:/certs/portainer.key
+      - sslcert:/certs/host-certs/live/${HOST_HOSTNAME}/cert.pem
+      - sslkey:/certs/host-certs/live/${HOST_HOSTNAME}/privkey.pem
     ports:
       - 9443:9443
       - 8000:8000
